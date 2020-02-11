@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: skyblue;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .human {
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+
+.container .human .head {
+  width: 90px;
+  height: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fce093), to(#fbd261));
+  background-image: linear-gradient(#fce093, #fbd261);
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 45px);
+  border-radius: 20px;
+}
+
+.container .human .head .hair-top,
+.container .human .head .hair-left,
+.container .human .head .hair-right {
+  height: 20px;
+  background-color: #000;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.container .human .head .hair-top {
+  width: 94px;
+  top: -5px;
+  left: calc(50% - 47px);
+}
+
+.container .human .head .hair-left {
+  width: 30px;
+  height: 15px;
+  left: -15px;
+  top: 10px;
+  -webkit-transform: rotateZ(100deg);
+          transform: rotateZ(100deg);
+}
+
+.container .human .head .hair-right {
+  width: 30px;
+  height: 15px;
+  right: -15px;
+  top: 10px;
+  -webkit-transform: rotateZ(-100deg);
+          transform: rotateZ(-100deg);
+}
+
+.container .human .head .eye-left,
+.container .human .head .eye-right {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px solid #f9c430;
+}
+
+.container .human .head .eye-left {
+  left: 10px;
+}
+
+.container .human .head .eye-right {
+  right: 10px;
+}
+
+.container .human .head .eye-left::before,
+.container .human .head .eye-right::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: calc(50%-5px);
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.container .human .head .eye-left::after,
+.container .human .head .eye-right::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #000;
+  border-radius: 50%;
+}
+
+.container .human .head .nose {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 20px;
+  background-color: #f9c430;
+  border-radius: 10px;
+}
+
+.container .human .head .mouth {
+  position: absolute;
+  top: calc(50% + 30px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 10px;
+  background-color: #df6464;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.container .human .head .mouth::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+}
+
+.container .human .neck {
+  position: absolute;
+  top: 130px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 30px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fce093), to(#fbd261));
+  background-image: linear-gradient(to top, #fce093, #fbd261);
+}
+
+.container .human .neck::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 20px;
+  background-color: #fce093;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1;
+}
+
+.container .human .body {
+  position: absolute;
+  top: 160px;
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 180px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(gray), to(#4d4d4d));
+  background-image: linear-gradient(gray, #4d4d4d);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.container .human .body .shoulder-left,
+.container .human .body .shoulder-right {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: gray;
+  z-index: -1;
+}
+
+.container .human .body .shoulder-left .arm-left,
+.container .human .body .shoulder-left .arm-right,
+.container .human .body .shoulder-right .arm-left,
+.container .human .body .shoulder-right .arm-right {
+  position: absolute;
+  width: 30px;
+  background-color: #fce093;
+  z-index: 1;
+}
+
+.container .human .body .shoulder-left {
+  left: -10px;
+}
+
+.container .human .body .shoulder-left .arm-left {
+  top: 10px;
+  left: -38px;
+  height: 160px;
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+}
+
+.container .human .body .shoulder-left .arm-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 17px);
+  width: 34px;
+  height: 40px;
+  background-color: gray;
+}
+
+.container .human .body .shoulder-right {
+  right: -10px;
+}
+
+.container .human .body .shoulder-right .arm-right {
+  top: -140px;
+  right: 2px;
+  height: 300px;
+  -webkit-transform: rotateZ(-160deg);
+          transform: rotateZ(-160deg);
+  -webkit-animation: wave 1s ease-in-out infinite;
+          animation: wave 1s ease-in-out infinite;
+}
+
+.container .human .body .shoulder-right .arm-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 17px);
+  width: 34px;
+  height: 170px;
+  background-color: gray;
+}
+
+.container .human .body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: #8a1c1c;
+}
+
+.container .human .body::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#676767), to(#5a5a5a));
+  background-image: linear-gradient(#676767, #5a5a5a);
+  border-top: 1px solid #4d4d4d;
+}
+
+.container .human .leg-left,
+.container .human .leg-right {
+  position: absolute;
+  bottom: -200px;
+  width: 40px;
+  height: 200px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9bc17), to(#fce093));
+  background-image: linear-gradient(#f9bc17, #fce093);
+}
+
+.container .human .leg-left {
+  left: 20px;
+}
+
+.container .human .leg-right {
+  right: 20px;
+}
+
+.container .human .leg-left::before,
+.container .human .leg-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 74px;
+  height: 70px;
+}
+
+.container .human .leg-left::before {
+  left: -20px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#b42424), to(#741717));
+  background-image: linear-gradient(to left, #b42424, #741717);
+}
+
+.container .human .leg-right::before {
+  right: -20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b42424), to(#741717));
+  background-image: linear-gradient(to right, #b42424, #741717);
+}
+
+.container .human .leg-left::after,
+.container .human .leg-right::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 62px;
+  height: 25px;
+  background-color: #000;
+}
+
+.container .human .leg-left::after {
+  left: -20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 5px;
+}
+
+.container .human .leg-right::after {
+  right: -20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
+}
+
+.container .human::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 90px);
+  width: 180px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(-160deg);
+            transform: rotateZ(-160deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-120deg);
+            transform: rotateZ(-120deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-160deg);
+            transform: rotateZ(-160deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(-160deg);
+            transform: rotateZ(-160deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-120deg);
+            transform: rotateZ(-120deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-160deg);
+            transform: rotateZ(-160deg);
+  }
+}
